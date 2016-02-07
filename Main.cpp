@@ -2,7 +2,8 @@
  *    > Author:   UncP
  *    > Mail:     770778010@qq.com
  *    > Description:
- *			BigNumber   Version 5.2.1
+ *			BigNumber Calculator 
+ *             Version 5.2.1
  *    > Created Time: 2016-01-17 15:51:33
 **/
 
@@ -20,26 +21,38 @@ using namespace::std;
 #include "Plus.cpp"
 #include "Minus.cpp"
 #include "Multiply.cpp"
-#ifndef ACCURACY
-#define  ACCURACY  101
-#endif
 #include "Devide.cpp"
 #include "Extended Operations.cpp"
 #include "Other Operations.cpp"
 
+#ifndef ACCURACY
+#define  ACCURACY  1001
+#endif
+
 int main()
 {
-    clock_t start,end;
-    start = clock();
-    BigNumber a("16");
-    BigNumber b("999999999"),c("1"),d;
-    a.factorial(a);
-    // a.power(a, 2);
-    // a = a * b;
-    // a.circumference_ratio_GLA(100, 7);
-    // a.circumference_ratio_BBP(100);
-    cout<<a;
-    end = clock();
-    cout<<(end - start)<<endl;
+    BigNumber a("10000");
+    a.factorial(a);                      // calculate 10000!
+    cout << a << endl;
+    
+    BigNumber b("2");
+    a.power(b, 10000);                   // calculate 2 ^ 10000
+    cout << a << endl;
+    
+    a.circumference_ratio_BBP(1000);     // calculate Pi until 1000th bit after the dot
+    cout << a < endl;
+    
+    BigNumber c("1234567898765432123456789.12345678987654321");
+    BigNumber d("9876543212345678987654321.98765432123456789");
+    BigNumber e;
+    
+    e = c + d; cout << e << endl;
+    
+    e = c - d; cout << e << endl;
+    
+    e = c * d; cout << e << endl;
+    
+    e = c / d; cout << e << endl;
+
     return 0;
 }
