@@ -26,7 +26,7 @@ using namespace::std;
 #include "Other Operations.cpp"
 
 #ifndef ACCURACY
-#define  ACCURACY  1001
+#define  ACCURACY  101
 #endif
 
 int main()
