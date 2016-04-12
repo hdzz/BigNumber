@@ -1,5 +1,7 @@
 This is a repository for BigNumber Calculator.
 
+Version 5.2.1
+
 it can conduct add, subtract, multiply, divide operations,
 basically it can calculate any number no matter how big or how small it is,
 as long as there is enough memory to allocate.
