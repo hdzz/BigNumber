@@ -450,23 +450,3 @@ int Dot_Info(const BigNumber &A)
             da++;
     return da;
 }
-
-int main()
-{
-    BigNumber a("2");
-    BigNumber b("-3342553451.00657");
-    BigNumber c("20");
-    BigNumber d;
-    c=a/b;
-    cout<<c;
-    /*c=a+b;
-    cout<<c;
-    c=a-b;
-    cout<<c;
-    c=a*b;
-    cout<<c;*/
-    //d.factorial(c);
-    //d.output(c);    
-    system("pause");
-    return 0;
-}
