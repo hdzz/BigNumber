@@ -29,17 +29,5 @@ using namespace::std;
 
 int main()
 {
-    clock_t start,end;
-    start = clock();
-    BigNumber a("2");
-    BigNumber b("999999999"),c("1"),d;
-    // a.factorial(a);
-    a.power(a, 18);
-    // a = a * b;
-    // a.circumference_ratio_GLA(100, 7);
-    // a.circumference_ratio_BBP(100);
-    cout<<a;
-    end = clock();
-    cout<<(end - start)<<endl;
     return 0;
 }
