@@ -1,4 +1,4 @@
-This is a repository for BigNumber Calculator.
+        大数类
 
 版本 4
 功能：
@@ -16,6 +16,7 @@ This is a repository for BigNumber Calculator.
     a *= b;
 性能信息：
     10000 的阶乘用时 65 分钟。
+
 
 版本 5.2.1
 功能：
@@ -38,6 +39,7 @@ This is a repository for BigNumber Calculator.
     a *= b;
 性能信息：
     10000 的阶乘用时 25 秒钟，比版本4.0性能提升9360倍。
+
 
 版本 6.4.3
 这个版本主要是为了在阶乘运算上尽可能地提升性能，所以没有完成版本5.2.1的所有功能。
