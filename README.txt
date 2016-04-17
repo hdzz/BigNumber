@@ -1,19 +1,56 @@
 This is a repository for BigNumber Calculator.
 
-Version 5.2.1
+版本 4
+功能：
+    支持任意数位的加减乘除运算，阶乘运算。
+数据结构：
+    string，保存数字中所有信息（包括长度、正负、小数点）。
+进制：
+    10
+运算符重载：
+    +  -  *  /  +=  -=  *=  /=  ++(前后缀)  --(前后缀)
+    >  <  ==  !=
+使用：
+    BigNumber a("123456.789"), b("-987654.321");
+    a = a + b;
+    a *= b;
+性能信息：
+    10000 的阶乘用时 65 分钟。
 
-it can conduct add, subtract, multiply, divide operations,
-basically it can calculate any number no matter how big or how small it is,
-as long as there is enough memory to allocate.
+版本 5.2.1
+功能：
+    支持任意数位的加减乘除运算，阶乘运算，幂数运算，圆周率运算，取模运算。
+数据结构：
+    unsigned char *val;         存放数字
+    unsigned char *first_free;  数字结尾
+    int cap;                    分配的内存大小
+    int len;                    实际长度
+    int dot;                    小数点所在位置
+进制：
+    10
+运算符重载：
+    +  -  *  /  +=  -=  *=  /=  ++(前后缀)  --(前后缀)
+    >  <  <= >=  ==  !=
+    <<
+使用：
+    BigNumber a("123456.789"), b("-987654.321");
+    a = a + b;
+    a *= b;
+性能信息：
+    10000 的阶乘用时 25 秒钟，比版本4.0性能提升9360倍。
 
-For instance, you can initialize two BigNumbers like this,
-BigNumber a("12345678987654321"), b("98765432123456789");
-then you can input a = a + b; or a = a - b; or a = a * b; or a = a / b;
-
-Apart from the basic operations,
-you can calculate the factorial number, the fibonacci number, and the circumference_ratio.
-
-For instance, a.factorial(10000),
-then it will calculate the number 1 * 2 *... * 10000;
-or a.fibonacci(10000), then it will calculate the 10000th fibonacci number;
-or a.circumference_ratio_BBP(1000), then it will calculate Pi 1000bits after the dot.
+版本 6.4.3
+这个版本主要是为了在阶乘运算上尽可能地提升性能，所以没有完成版本5.2.1的所有功能。
+数据结构（部分）：
+    int cap_i_;     分配的内存大小
+    int *intg_;     整数部分数字
+    int *free_i_;   整数部分数字末尾
+    int len_i_;     整数部分长度
+性能信息：
+    最差性能：10000 的阶乘用时 1.9 秒
+    一次优化后的性能：10000 的阶乘 0.4 秒（将阶乘数划分区间后运算）
+    二次优化后的性能：10000 的阶乘 0.4 秒（将阶乘数划分区间后合并运算）
+    二次优化后比版本4.0性能提升585000倍，比版本5.2.1性能提升62.5倍。
+其他性能：
+    100000 的阶乘用时 65 分钟；
+    1000000 的阶乘用时 2.7 小时
