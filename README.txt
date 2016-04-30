@@ -14,7 +14,7 @@
     BigNumber a("123456.789"), b("-987654.321");
     a = a + b;
     a *= b;
-性能信息（Intel i3 2.1 GHz）：
+性能信息（Windows 7, Intel i3 CPU 2.1 GHz）：
     10000 的阶乘用时 65 分钟。
 
 
