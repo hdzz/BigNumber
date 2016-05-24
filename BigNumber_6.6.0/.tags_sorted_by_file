@@ -1,0 +1,28 @@
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+BigNumber	BigNumber.cpp	/^BigNumber::BigNumber(BigNumber &A)$/;"	f	class:BigNumber
+BigNumber	BigNumber.cpp	/^BigNumber::BigNumber(int num)$/;"	f	class:BigNumber
+multiply	BigNumber.cpp	/^BigNumber& BigNumber::multiply(BigNumber &A, BigNumber &B)$/;"	f	class:BigNumber
+operator =	BigNumber.cpp	/^BigNumber& BigNumber::operator=(const BigNumber &A)$/;"	f	class:BigNumber
+partial_factorial	BigNumber.cpp	/^BigNumber& BigNumber::partial_factorial(const int beg, const int end, \\$/;"	f	class:BigNumber
+release	BigNumber.cpp	/^void BigNumber::release()$/;"	f	class:BigNumber
+show	BigNumber.cpp	/^void BigNumber::show()$/;"	f	class:BigNumber
+BigNumber	BigNumber.h	/^class BigNumber$/;"	c
+Max	BigNumber.h	/^inline int Max(int a, int b) { return (a > b) ? a : b; }$/;"	f
+PER	BigNumber.h	/^const int PER = 1000000000;$/;"	v
+Per	BigNumber.h	/^const int Per = 100000000;$/;"	v
+_BIGNUMBER_H_	BigNumber.h	11;"	d
+alloc_	BigNumber.h	/^		std::allocator<int> alloc_;$/;"	m	class:BigNumber
+cap_i_	BigNumber.h	/^		int  cap_i_  = 0;$/;"	m	class:BigNumber
+free_i_	BigNumber.h	/^		int *free_i_ = nullptr;$/;"	m	class:BigNumber
+intg_	BigNumber.h	/^		int *intg_   = nullptr;$/;"	m	class:BigNumber
+len_i_	BigNumber.h	/^		int  len_i_  = 0;$/;"	m	class:BigNumber
+~BigNumber	BigNumber.h	/^		~BigNumber() { release(); }$/;"	f	class:BigNumber
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+CC	Makefile	/^CC = g++$/;"	m
+CFLAGS	Makefile	/^CFLAGS = -std=c++11 -Wall -O3$/;"	m
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+TNUM	main.cpp	/^const int TNUM = 10;$/;"	v
+main	main.cpp	/^int main()$/;"	f
