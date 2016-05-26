@@ -19,7 +19,7 @@ class BigNumber
 {
 	public:
 		BigNumber() = default;
-		BigNumbr& operator=(const int);
+		BigNumber& operator=(const int);
 		BigNumber& operator=(const BigNumber&);
 		void show();
 		void release();

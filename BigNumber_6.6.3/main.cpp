@@ -32,7 +32,7 @@ int main()
 			int beg = i * interval;
 			int end = beg + interval;
 			vec1.push_back(std::thread( \
-				&BigNumber::partial_factorial, &bn1[i], beg, end, 500));
+				&BigNumber::partial_factorial, &bn1[i], beg, end, 50));
 		}
 		for (size_t i = 0; i < TNUM; ++i)
 			vec1[i].join();
@@ -58,6 +58,7 @@ int main()
 		BigNumber a;
 		a.multiply(bn3[0], bn3[1]);
 
+		a.show();
 		end = clock();
 		std::cout << (end - beg) / 1000 << std::endl;
 

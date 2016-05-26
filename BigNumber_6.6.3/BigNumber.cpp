@@ -27,12 +27,13 @@ BigNumber& BigNumber::operator=(const BigNumber &A)
 	return *this;
 }
 
-BigNumber::BigNumber(const int num)
+BigNumber& BigNumber::operator=(const int num)
 {
 	cap_i_ = len_i_ = 1;
 	intg_= alloc_.allocate(cap_i_);
 	free_i_ = intg_;
 	alloc_.construct(free_i_++, num);
+	return *this;
 }
 
 void BigNumber::show()
